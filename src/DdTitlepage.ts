@@ -486,7 +486,7 @@ export class DdTitlepage extends LitElement {
         this.style.setProperty("--titlepage-logo-left", `calc( 50% - ${imgWidth/2}px )`);
         */
 
-      /* c8 ignore next 5 */
+      /* c8 ignore next 11 */
       window.addEventListener('load', () => {
         const imgWidth = (
           this.shadowRoot!.querySelector(
