@@ -149,7 +149,7 @@ export class DdTitlepage extends LitElement {
    * |**`--dd-color-list-bg`**     |`rgba(248, 237, 227, 0.5)`  | background color for `list`-mode                                                          |
    * |**`--dd-color-text`**        |`rgba(0, 0, 0, 0.9)`        | main text color                                                                           |
    * |**`--dd-color-text-light`**  |`rgba(255, 255, 255, 1)`    | *light* text color                                                                        |
-   * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide ratio |
+   * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide aspect ratio |
    * |**`--dd-slide-width`**       |`1024px`                    | slide width (this, together with`--dd-slide-ratio` determines the slide height)           |
    * |**`--dd-font`**              |`24px/2 'Roboto', sans-serif`| font style |
    * |**`--dd-titlepage-padding-side`**     |`50px`    | content padding from the side |
