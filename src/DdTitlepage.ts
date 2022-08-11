@@ -100,6 +100,34 @@ async function getJsonConfig(url: string) {
  *   [...]
  * </html>
  * ```
+ *
+ * An interesting feature of `dd-titlepage` inside the `dd-component`
+ * ecosystem, is that it can inherit attributes from a HTML selector
+ * with the {@link DdTitlepage.fromSelector | `from-selector` attribute}
+ * (defaults to `dd-slide-collection`). For example to obtain the exact same
+ * titlepage as in the last example, but now inherit from the
+ * `dd-slide-collection` element:
+ *
+ * ```html
+ * <html>
+ *   [...]
+ *   <dd-slide-collection main-title="MyTitle"
+ *                        sub-title="And My SubTitle"
+ *                        date="2022-07-12"
+ *                        author="Senne Van Baelen and Gerben Peeters"
+ *                        organisation="Digital Dasein"
+ *                        img-src="./assets/img/logo.jpeg"
+ *                        ... (other attr)>
+ *      <dd-titlepage></dd-titlepage>
+ *      <!--
+ *      which is the equivalent for:
+ *      <dd-titlepage from-selector="dd-slide-collection"></dd-titlepage>
+ *      -->
+ *   </dd-slide-collection>
+ *   [...]
+ * </html>
+ * ```
+ *
  */
 
 export class DdTitlepage extends LitElement {
@@ -373,7 +401,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `img-src`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'img-src' })
   imgSrc = DEFAULT_ATTRIBUTES.imgSrc;
@@ -384,18 +411,16 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `main-title`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'main-title' })
   mainTitle = DEFAULT_ATTRIBUTES.mainTitle;
 
   /**
-   * Ssubtitle
+   * Subtitle
    *
    * **Corresponding attribute:** `sub-title`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'sub-title' })
   subTitle = DEFAULT_ATTRIBUTES.subTitle;
@@ -406,7 +431,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `author`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'author' })
   author = DEFAULT_ATTRIBUTES.author;
@@ -417,7 +441,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `organisation`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
 
   @property({ type: String, attribute: 'organisation' })
@@ -429,7 +452,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `organisation-url`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'organisation-url' })
   organisationUrl = DEFAULT_ATTRIBUTES.organisationUrl;
@@ -440,7 +462,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `date`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'date' })
   date = DEFAULT_ATTRIBUTES.date;
@@ -451,7 +472,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `no-default-map`
    *
    * **Default value:** `false`
-   * ```
    */
   @property({ type: Boolean, attribute: 'no-default-map' })
   noDefaultMap = DEFAULT_ATTRIBUTES.noDefaultMap;
@@ -462,7 +482,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `center-text`
    *
    * **Default value:** `false`
-   * ```
    */
   @property({ type: Boolean, attribute: 'center-text' })
   centerText = DEFAULT_ATTRIBUTES.centerText;
@@ -473,7 +492,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `center-text`
    *
    * **Default value:** `false`
-   * ```
    */
   @property({ type: Boolean, attribute: 'center-img' })
   centerImg = DEFAULT_ATTRIBUTES.centerImg;
@@ -485,7 +503,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `config-path`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'config-path' })
   configPath = DEFAULT_ATTRIBUTES.configPath;
@@ -498,7 +515,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `from-selector`
    *
    * **Default value:** `dd-slide-collection`
-   * ```
    */
   @property({ type: String, attribute: 'from-selector' })
   fromSelector = DEFAULT_ATTRIBUTES.fromSelector;
@@ -509,7 +525,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `html-top-left`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'html-top-left' })
   htmlTopLeft = DEFAULT_ATTRIBUTES.htmlTopLeft;
@@ -520,7 +535,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `html-top-right`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'html-top-right' })
   htmlTopRight = DEFAULT_ATTRIBUTES.htmlTopRight;
@@ -531,7 +545,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `html-mid-left`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'html-mid-left' })
   htmlMidLeft = DEFAULT_ATTRIBUTES.htmlMidLeft;
@@ -542,7 +555,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `html-mid-right`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'html-mid-right' })
   htmlMidRight = DEFAULT_ATTRIBUTES.htmlMidRight;
@@ -553,7 +565,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `html-bot-left`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'html-bot-left' })
   htmlBotLeft = DEFAULT_ATTRIBUTES.htmlBotLeft;
@@ -564,7 +575,6 @@ export class DdTitlepage extends LitElement {
    * **Corresponding attribute:** `html-bot-right`
    *
    * **Default value:** `""` (empty string)
-   * ```
    */
   @property({ type: String, attribute: 'html-bot-right' })
   htmlBotRight = DEFAULT_ATTRIBUTES.htmlBotRight;
