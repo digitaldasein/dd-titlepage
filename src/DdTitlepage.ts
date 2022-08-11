@@ -73,7 +73,80 @@ async function getJsonConfig(url: string) {
   };
 }
 
+/**
+ * Main class for HTML web component **`dd-titlepage`**
+ *
+ * For **styling** this component, check out {@link DdTitlepage.styles |
+ * the styles section}.
+ *
+ * <u>**Important note**</u>: all lit-component properties (interpreted here as
+ * `other properties`) that are documented here have a **corresponding
+ * HTML attribute**. The _non-attribute_ properties are consired private,
+ * and are ingored in the documentation.
+ *
+ * @example
+ * A simple titlepage
+ *
+ * ```html
+ * <html>
+ *   [...]
+ *   <dd-titlepage main-title="MyTitle"
+ *                 sub-title="And My SubTitle"
+ *                 date="2022-07-12"
+ *                 author="Senne Van Baelen and Gerben Peeters"
+ *                 organisation="Digital Dasein"
+ *                 img-src="./assets/img/logo.jpeg">
+ *   </dd-titlepage>
+ *   [...]
+ * </html>
+ * ```
+ */
+
 export class DdTitlepage extends LitElement {
+  /**
+   * To style the `dd-titlepage` component, use the following **CSS host
+   * variables** (including their default values):
+   *
+   * The titlepage is divided into a 3 x 2 grid, with corresponding styling
+   * vars for top, middle, and bottom. By default, the width of the first
+   * column is 100%, so technically, the grid is 3 x 1 in this case (can be
+   * adjusted).
+   *
+   * |  <div style="width:200px">CSS variable</div>   | <div style="width:130px">Default</div>   | Description |
+   * |:-----------------------------------------------|:-----------------------------------------|:------------|
+   * |**`--dd-color-prim`**        |`rgba(153, 155, 132, 1)`    | primary `dd-component` color, which propagates into nested `dd-elements`                  |
+   * |**`--dd-color-prim-dark`**   |`rgba(65, 90, 72, 1)`       | *dark-theme* primary `dd-component` color, which propagates into nested `dd-elements`     |
+   * |**`--dd-color-sec`**         |`rgba(248, 237, 227, 1)`    | secundary `dd-component` color, which propagates into nested `dd-elements`                |
+   * |**`--dd-color-sec-dark`**    |`rgba(238, 254, 216, 1)`    | *dark-theme* secundary `dd-component` color, which propagates into nested `dd-elements` |
+   * |**`--dd-color-list-bg`**     |`rgba(248, 237, 227, 0.5)`  | background color for `list`-mode                                                          |
+   * |**`--dd-color-text`**        |`rgba(0, 0, 0, 0.9)`        | main text color                                                                           |
+   * |**`--dd-color-text-light`**  |`rgba(255, 255, 255, 1)`    | *light* text color                                                                        |
+   * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide ratio |
+   * |**`--dd-slide-width`**       |`1024px`                    | slide width (this, together with`--dd-slide-ratio` determines the slide height)           |
+   * |**`--dd-font`**              |`24px/2 'Roboto', sans-serif`| font style |
+   * |**`--dd-titlepage-padding-side`**     |`50px`    | content padding from the side |
+   * |**`--dd-titlepage-padding-top-top`**  |`10px`    | content top-padding for the top row     |
+   * |**`--dd-titlepage-padding-mid-top`**  |`100px`   | content top-padding for the middel row |
+   * |**`--dd-titlepage-padding-bot-top`**  |`10px`    | content top-padding for the bottom row  |
+   * |**`--dd-titlepage-align-lsec`**  |`left`     | align left section of titlepage (options: [left, right, or center]) |
+   * |**`--dd-titlepage-align-rsec`**  |`right`    | align right section of titlepage (options: [left, right, or center]) |
+   * |**`--dd-titlepage-w-left`**      |`100%`    | width of the left column (remember, 3x2 grid, by default, left column is full width) |
+   * |**`--dd-titlepage-h-top`**      |`calc(0.15 * var(--slide-height)`    | height of the top row |
+   * |**`--dd-titlepage-h-middle`**      |`var(--slide-height) - var(--titlepage-h-top) - var(--titlepage-h-bottom)`    | height of the middle row |
+   * |**`--dd-titlepage-h-bottom`**      |`calc(0.2 * var(--slide-height)`    | height of the bottom row |
+   * |**`--dd-titlepage-font-size`**         |`24px`                                           | fontsize for default titlepage text |
+   * |**`--dd-titlepage-title-font-size`**   |`calc(2.15 * var(--titlepage-font-size))`        | fontsize title |
+   * |**`--dd-titlepage-subtitle-font-size`**|`calc(0.6 * var(--titlepage-title-font-size))`   | fontsize subtitle |
+   * |**`--dd-titlepage-logo-height`**       |`calc(var(--titlepage-h-top) / 1.3)`             | height of the titlepage logo/image |
+   * |**`--dd-titlepage-logo-top`**          |`calc(var(--titlepage-h-top) - var(--titlepage-logo-height) / 2)`             | titlepage top padding for logo/image |
+   * |**`--dd-titlepage-logo-left`**         |`var(--titlepage-padding-side)`                  | titlepage left padding for logo/image |
+   *
+   * The variables can be set anywhere in your HTML context (e.g. in `:root`,
+   * up until the `dd-titlepage` component itself).
+   *
+   *
+   */
+
   static styles = css`
     :host {
       /* slide placeholders */
@@ -152,14 +225,14 @@ export class DdTitlepage extends LitElement {
         --dd-prim-color-dark,
         rgba(65, 90, 72, 1)
       );
-      --titlepage-sec-color: var(--dd-sec-color, rgba(248, 237, 227, 1));
-      --titlepage-sec-color-dark: var(
-        --dd-sec-color-dark,
+      --titlepage-color-sec: var(--dd-color-sec, rgba(248, 237, 227, 1));
+      --titlepage-color-sec-dark: var(
+        --dd-color-sec-dark,
         rgba(238, 254, 216, 1)
       );
-      --titlepage-text-color: var(--dd-text-color, rgba(0, 0, 0, 0.9));
-      --titlepage-text-color-light: var(
-        --dd-text-color-light,
+      --titlepage-color-text: var(--dd-color-text, rgba(0, 0, 0, 0.9));
+      --titlepage-color-text-light: var(
+        --dd-color-text-light,
         rgba(255, 255, 255, 1)
       );
 
@@ -242,22 +315,22 @@ export class DdTitlepage extends LitElement {
 
     .dd-titlepage-top {
       top: 0;
-      background-color: var(--titlepage-sec-color);
-      color: var(--titlepage-text-color);
+      background-color: var(--titlepage-color-sec);
+      color: var(--titlepage-color-text);
       padding: var(--titlepage-padding-sectop);
     }
 
     .dd-titlepage-middle {
       max-height: var(--titlepage-h-middle);
       background-color: var(--titlepage-prim-color);
-      color: var(--titlepage-text-color-light);
+      color: var(--titlepage-color-text-light);
       padding: var(--titlepage-padding-secmid);
     }
 
     .dd-titlepage-bottom {
       padding: var(--titlepage-padding-secbot);
-      background-color: var(--titlepage-sec-color);
-      color: var(--titlepage-text-color);
+      background-color: var(--titlepage-color-sec);
+      color: var(--titlepage-color-text);
     }
     .dd-titlepage-bottom .default {
       font-size: calc(0.45 * var(--titlepage-title-font-size));
@@ -277,7 +350,7 @@ export class DdTitlepage extends LitElement {
 
     .dd-titlepage-org-url {
       text-decoration: none;
-      /*color: var(--titlepage-text-color)*/
+      /*color: var(--titlepage-color-text)*/
     }
 
     @media (max-width: 1168px) {
@@ -294,57 +367,205 @@ export class DdTitlepage extends LitElement {
     }
   `;
 
+  /**
+   * Image source
+   *
+   * **Corresponding attribute:** `img-src`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'img-src' })
   imgSrc = DEFAULT_ATTRIBUTES.imgSrc;
 
+  /**
+   * Main title
+   *
+   * **Corresponding attribute:** `main-title`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'main-title' })
   mainTitle = DEFAULT_ATTRIBUTES.mainTitle;
 
+  /**
+   * Ssubtitle
+   *
+   * **Corresponding attribute:** `sub-title`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'sub-title' })
   subTitle = DEFAULT_ATTRIBUTES.subTitle;
 
+  /**
+   * Author
+   *
+   * **Corresponding attribute:** `author`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'author' })
   author = DEFAULT_ATTRIBUTES.author;
+
+  /**
+   * Name of organisation
+   *
+   * **Corresponding attribute:** `organisation`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
 
   @property({ type: String, attribute: 'organisation' })
   organisation = DEFAULT_ATTRIBUTES.organisation;
 
+  /**
+   * Hyperlink to organisation
+   *
+   * **Corresponding attribute:** `organisation-url`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'organisation-url' })
   organisationUrl = DEFAULT_ATTRIBUTES.organisationUrl;
 
+  /**
+   * Date
+   *
+   * **Corresponding attribute:** `date`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'date' })
   date = DEFAULT_ATTRIBUTES.date;
 
+  /**
+   * Maps titlepage content to default style (see demo)
+   *
+   * **Corresponding attribute:** `no-default-map`
+   *
+   * **Default value:** `false`
+   * ```
+   */
   @property({ type: Boolean, attribute: 'no-default-map' })
   noDefaultMap = DEFAULT_ATTRIBUTES.noDefaultMap;
 
+  /**
+   * Boolean for centering all text
+   *
+   * **Corresponding attribute:** `center-text`
+   *
+   * **Default value:** `false`
+   * ```
+   */
   @property({ type: Boolean, attribute: 'center-text' })
   centerText = DEFAULT_ATTRIBUTES.centerText;
 
+  /**
+   * Boolean for centering the image/logo
+   *
+   * **Corresponding attribute:** `center-text`
+   *
+   * **Default value:** `false`
+   * ```
+   */
   @property({ type: Boolean, attribute: 'center-img' })
   centerImg = DEFAULT_ATTRIBUTES.centerImg;
 
+  /**
+   * Path to JSON config file (corresponding inline attributes will
+   * **overwrite** attributes defined in JSON config
+   *
+   * **Corresponding attribute:** `config-path`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'config-path' })
   configPath = DEFAULT_ATTRIBUTES.configPath;
 
+  /**
+   * HTML selector from which you want to inherit relevant attributes.
+   * Setting the same attributes on `dd-titlepage` itself will overwrite
+   * potentially inherited values.
+   *
+   * **Corresponding attribute:** `from-selector`
+   *
+   * **Default value:** `dd-slide-collection`
+   * ```
+   */
   @property({ type: String, attribute: 'from-selector' })
   fromSelector = DEFAULT_ATTRIBUTES.fromSelector;
 
+  /**
+   * Custom HTML string for non-default top-left cell (3x2 grid)
+   *
+   * **Corresponding attribute:** `html-top-left`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'html-top-left' })
   htmlTopLeft = DEFAULT_ATTRIBUTES.htmlTopLeft;
 
+  /**
+   * Custom HTML string for non-default top-right cell (3x2 grid)
+   *
+   * **Corresponding attribute:** `html-top-right`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'html-top-right' })
   htmlTopRight = DEFAULT_ATTRIBUTES.htmlTopRight;
 
+  /**
+   * Custom HTML string for non-default mid-left cell (3x2 grid)
+   *
+   * **Corresponding attribute:** `html-mid-left`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'html-mid-left' })
   htmlMidLeft = DEFAULT_ATTRIBUTES.htmlMidLeft;
 
+  /**
+   * Custom HTML string for non-default mid-right cell (3x2 grid)
+   *
+   * **Corresponding attribute:** `html-mid-right`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'html-mid-right' })
   htmlMidRight = DEFAULT_ATTRIBUTES.htmlMidRight;
 
+  /**
+   * Custom HTML string for non-default bottom-left cell (3x2 grid)
+   *
+   * **Corresponding attribute:** `html-bot-left`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'html-bot-left' })
   htmlBotLeft = DEFAULT_ATTRIBUTES.htmlBotLeft;
 
+  /**
+   * Custom HTML string for non-default bottom-right cell (3x2 grid)
+   *
+   * **Corresponding attribute:** `html-bot-right`
+   *
+   * **Default value:** `""` (empty string)
+   * ```
+   */
   @property({ type: String, attribute: 'html-bot-right' })
   htmlBotRight = DEFAULT_ATTRIBUTES.htmlBotRight;
 
@@ -384,7 +605,7 @@ export class DdTitlepage extends LitElement {
       `;
   }
 
-  mapDefault() {
+  private _mapDefault() {
     if (this.mainTitle || this.subTitle) {
       this.htmlMidLeft = `
         <div class="dd-titlepage-title dd-titlepage-mid-l default">
@@ -514,7 +735,7 @@ export class DdTitlepage extends LitElement {
 
     if (this.fromSelector) this.injectFromSelector();
 
-    if (!this.noDefaultMap) this.mapDefault();
+    if (!this.noDefaultMap) this._mapDefault();
 
     // slot for custom caption
     htmlContent += this.makeTitlePage();
