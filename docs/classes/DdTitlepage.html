@@ -30,7 +30,7 @@ with the <a href="DdTitlepage.html#fromSelector"><code>from-selector</code> attr
 (defaults to <code>dd-slide-collection</code>). For example to obtain the exact same
 titlepage as in the last example, but now inherit from the
 <code>dd-slide-collection</code> element:</p>
-<pre><code class="language-html"><span class="hl-1">&lt;</span><span class="hl-2">html</span><span class="hl-1">&gt;</span><br/><span class="hl-0">  [...]</span><br/><span class="hl-0">  </span><span class="hl-1">&lt;</span><span class="hl-2">dd-slide-collection</span><span class="hl-0"> </span><span class="hl-4">main-title</span><span class="hl-0">=</span><span class="hl-5">&quot;MyTitle&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">sub-title</span><span class="hl-0">=</span><span class="hl-5">&quot;And My SubTitle&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">date</span><span class="hl-0">=</span><span class="hl-5">&quot;2022-07-12&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">author</span><span class="hl-0">=</span><span class="hl-5">&quot;Senne Van Baelen and Gerben Peeters&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">organisation</span><span class="hl-0">=</span><span class="hl-5">&quot;Digital Dasein&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">img-src</span><span class="hl-0">=</span><span class="hl-5">&quot;./assets/img/logo.jpeg&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">...</span><span class="hl-0"> </span><span class="hl-4">(other</span><span class="hl-0"> </span><span class="hl-4">attr)</span><span class="hl-1">&gt;</span><br/><span class="hl-0">     </span><span class="hl-1">&lt;</span><span class="hl-2">dd-titlepage</span><span class="hl-1">&gt;&lt;/</span><span class="hl-2">dd-titlepage</span><span class="hl-1">&gt;</span><br/><span class="hl-0">     </span><span class="hl-9">&lt;!--</span><br/><span class="hl-9">          which is the equivalent for:</span><br/><span class="hl-9">          &lt;dd-titlepage from-selector=&quot;dd-slide-collection&quot;&gt;&lt;/dd-titlepage&gt;</span><br/><span class="hl-9">     --&gt;</span><br/><span class="hl-0">  </span><span class="hl-1">&lt;/</span><span class="hl-2">dd-slide-collection</span><span class="hl-1">&gt;</span><br/><span class="hl-0">  [...]</span><br/><span class="hl-1">&lt;/</span><span class="hl-2">html</span><span class="hl-1">&gt;</span>
+<pre><code class="language-html"><span class="hl-1">&lt;</span><span class="hl-2">html</span><span class="hl-1">&gt;</span><br/><span class="hl-0">  [...]</span><br/><span class="hl-0">  </span><span class="hl-1">&lt;</span><span class="hl-2">dd-slide-collection</span><span class="hl-0"> </span><span class="hl-4">main-title</span><span class="hl-0">=</span><span class="hl-5">&quot;MyTitle&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">sub-title</span><span class="hl-0">=</span><span class="hl-5">&quot;And My SubTitle&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">date</span><span class="hl-0">=</span><span class="hl-5">&quot;2022-07-12&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">author</span><span class="hl-0">=</span><span class="hl-5">&quot;Senne Van Baelen and Gerben Peeters&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">organisation</span><span class="hl-0">=</span><span class="hl-5">&quot;Digital Dasein&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">img-src</span><span class="hl-0">=</span><span class="hl-5">&quot;./assets/img/logo.jpeg&quot;</span><br/><span class="hl-0">                       </span><span class="hl-4">...</span><span class="hl-0"> </span><span class="hl-4">(other</span><span class="hl-0"> </span><span class="hl-4">attr)</span><span class="hl-1">&gt;</span><br/><span class="hl-0">     </span><span class="hl-1">&lt;</span><span class="hl-2">dd-titlepage</span><span class="hl-1">&gt;&lt;/</span><span class="hl-2">dd-titlepage</span><span class="hl-1">&gt;</span><br/><span class="hl-0">     </span><span class="hl-9">&lt;!--</span><br/><span class="hl-9">     which is the equivalent for:</span><br/><span class="hl-9">     &lt;dd-titlepage from-selector=&quot;dd-slide-collection&quot;&gt;&lt;/dd-titlepage&gt;</span><br/><span class="hl-9">     --&gt;</span><br/><span class="hl-0">  </span><span class="hl-1">&lt;/</span><span class="hl-2">dd-slide-collection</span><span class="hl-1">&gt;</span><br/><span class="hl-0">  [...]</span><br/><span class="hl-1">&lt;/</span><span class="hl-2">html</span><span class="hl-1">&gt;</span>
 </code></pre>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
@@ -40,7 +40,7 @@ titlepage as in the last example, but now inherit from the
 <ul class="tsd-hierarchy">
 <li><span class="target">DdTitlepage</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L133">src/DdTitlepage.ts:133</a></li></ul></aside>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L134">src/DdTitlepage.ts:134</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -286,6 +286,7 @@ titlepage as in the last example, but now inherit from the
 <a href="DdTitlepage.html#textContent" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>text<wbr/>Content</span></a>
 <a href="DdTitlepage.html#title" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>title</span></a>
 <a href="DdTitlepage.html#translate" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>translate</span></a>
+<a href="DdTitlepage.html#widthLeft" class="tsd-index-link tsd-kind-property tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>width<wbr/>Left</span></a>
 <a href="DdTitlepage.html#__litElement_" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_$lit<wbr/>Element$</span></a>
 <a href="DdTitlepage.html#_initializers" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_initializers?</span></a>
 <a href="DdTitlepage.html#finalized" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>finalized</span></a>
@@ -838,11 +839,10 @@ titlepage as in the last example, but now inherit from the
 <div class="tsd-signature">author<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.author</span></div>
 <div class="tsd-comment tsd-typography"><p>Author</p>
 <p><strong>Corresponding attribute:</strong> <code>author</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L440">src/DdTitlepage.ts:440</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L437">src/DdTitlepage.ts:437</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="autocapitalize" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>autocapitalize</span><a href="#autocapitalize" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">autocapitalize<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
@@ -868,21 +868,19 @@ titlepage as in the last example, but now inherit from the
 <div class="tsd-signature">center<wbr/>Img<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.centerImg</span></div>
 <div class="tsd-comment tsd-typography"><p>Boolean for centering the image/logo</p>
 <p><strong>Corresponding attribute:</strong> <code>center-text</code></p>
-<p><strong>Default value:</strong> <code>false</code>
-```</p>
+<p><strong>Default value:</strong> <code>false</code></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L507">src/DdTitlepage.ts:507</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L498">src/DdTitlepage.ts:498</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="centerText" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>center<wbr/>Text</span><a href="#centerText" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">center<wbr/>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.centerText</span></div>
 <div class="tsd-comment tsd-typography"><p>Boolean for centering all text</p>
 <p><strong>Corresponding attribute:</strong> <code>center-text</code></p>
-<p><strong>Default value:</strong> <code>false</code>
-```</p>
+<p><strong>Default value:</strong> <code>false</code></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L496">src/DdTitlepage.ts:496</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L488">src/DdTitlepage.ts:488</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="childElementCount" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>child<wbr/>Element<wbr/>Count</span><a href="#childElementCount" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">child<wbr/>Element<wbr/>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
@@ -951,11 +949,10 @@ titlepage as in the last example, but now inherit from the
 <div class="tsd-comment tsd-typography"><p>Path to JSON config file (corresponding inline attributes will
 <strong>overwrite</strong> attributes defined in JSON config</p>
 <p><strong>Corresponding attribute:</strong> <code>config-path</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L519">src/DdTitlepage.ts:519</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L509">src/DdTitlepage.ts:509</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="contentEditable" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>content<wbr/>Editable</span><a href="#contentEditable" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">content<wbr/>Editable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
@@ -973,11 +970,10 @@ titlepage as in the last example, but now inherit from the
 <div class="tsd-signature">date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.date</span></div>
 <div class="tsd-comment tsd-typography"><p>Date</p>
 <p><strong>Corresponding attribute:</strong> <code>date</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L474">src/DdTitlepage.ts:474</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L468">src/DdTitlepage.ts:468</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="dir" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dir</span><a href="#dir" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">dir<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
@@ -1019,11 +1015,10 @@ titlepage as in the last example, but now inherit from the
 Setting the same attributes on <code>dd-titlepage</code> itself will overwrite
 potentially inherited values.</p>
 <p><strong>Corresponding attribute:</strong> <code>from-selector</code></p>
-<p><strong>Default value:</strong> <code>dd-slide-collection</code>
-```</p>
+<p><strong>Default value:</strong> <code>dd-slide-collection</code></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L532">src/DdTitlepage.ts:532</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L521">src/DdTitlepage.ts:521</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="hidden" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>hidden</span><a href="#hidden" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">hidden<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
@@ -1035,61 +1030,55 @@ potentially inherited values.</p>
 <div class="tsd-signature">html<wbr/>Bot<wbr/>Left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.htmlBotLeft</span></div>
 <div class="tsd-comment tsd-typography"><p>Custom HTML string for non-default bottom-left cell (3x2 grid)</p>
 <p><strong>Corresponding attribute:</strong> <code>html-bot-left</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L587">src/DdTitlepage.ts:587</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L571">src/DdTitlepage.ts:571</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="htmlBotRight" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>html<wbr/>Bot<wbr/>Right</span><a href="#htmlBotRight" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">html<wbr/>Bot<wbr/>Right<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.htmlBotRight</span></div>
 <div class="tsd-comment tsd-typography"><p>Custom HTML string for non-default bottom-right cell (3x2 grid)</p>
 <p><strong>Corresponding attribute:</strong> <code>html-bot-right</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L598">src/DdTitlepage.ts:598</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L581">src/DdTitlepage.ts:581</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="htmlMidLeft" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>html<wbr/>Mid<wbr/>Left</span><a href="#htmlMidLeft" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">html<wbr/>Mid<wbr/>Left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.htmlMidLeft</span></div>
 <div class="tsd-comment tsd-typography"><p>Custom HTML string for non-default mid-left cell (3x2 grid)</p>
 <p><strong>Corresponding attribute:</strong> <code>html-mid-left</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L565">src/DdTitlepage.ts:565</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L551">src/DdTitlepage.ts:551</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="htmlMidRight" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>html<wbr/>Mid<wbr/>Right</span><a href="#htmlMidRight" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">html<wbr/>Mid<wbr/>Right<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.htmlMidRight</span></div>
 <div class="tsd-comment tsd-typography"><p>Custom HTML string for non-default mid-right cell (3x2 grid)</p>
 <p><strong>Corresponding attribute:</strong> <code>html-mid-right</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L576">src/DdTitlepage.ts:576</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L561">src/DdTitlepage.ts:561</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="htmlTopLeft" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>html<wbr/>Top<wbr/>Left</span><a href="#htmlTopLeft" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">html<wbr/>Top<wbr/>Left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.htmlTopLeft</span></div>
 <div class="tsd-comment tsd-typography"><p>Custom HTML string for non-default top-left cell (3x2 grid)</p>
 <p><strong>Corresponding attribute:</strong> <code>html-top-left</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L543">src/DdTitlepage.ts:543</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L531">src/DdTitlepage.ts:531</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="htmlTopRight" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>html<wbr/>Top<wbr/>Right</span><a href="#htmlTopRight" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">html<wbr/>Top<wbr/>Right<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.htmlTopRight</span></div>
 <div class="tsd-comment tsd-typography"><p>Custom HTML string for non-default top-right cell (3x2 grid)</p>
 <p><strong>Corresponding attribute:</strong> <code>html-top-right</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L554">src/DdTitlepage.ts:554</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L541">src/DdTitlepage.ts:541</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -1103,11 +1092,10 @@ potentially inherited values.</p>
 <div class="tsd-signature">img<wbr/>Src<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.imgSrc</span></div>
 <div class="tsd-comment tsd-typography"><p>Image source</p>
 <p><strong>Corresponding attribute:</strong> <code>img-src</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L407">src/DdTitlepage.ts:407</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L407">src/DdTitlepage.ts:407</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="innerHTML" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>innerHTML</span><a href="#innerHTML" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">innerHTML<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
@@ -1175,11 +1163,10 @@ potentially inherited values.</p>
 <div class="tsd-signature">main<wbr/>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.mainTitle</span></div>
 <div class="tsd-comment tsd-typography"><p>Main title</p>
 <p><strong>Corresponding attribute:</strong> <code>main-title</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L418">src/DdTitlepage.ts:418</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L417">src/DdTitlepage.ts:417</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="namespaceURI" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>namespaceURI</span><a href="#namespaceURI" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">namespaceURI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
@@ -1209,11 +1196,10 @@ potentially inherited values.</p>
 <div class="tsd-signature">no<wbr/>Default<wbr/>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.noDefaultMap</span></div>
 <div class="tsd-comment tsd-typography"><p>Maps titlepage content to default style (see demo)</p>
 <p><strong>Corresponding attribute:</strong> <code>no-default-map</code></p>
-<p><strong>Default value:</strong> <code>false</code>
-```</p>
+<p><strong>Default value:</strong> <code>false</code></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L485">src/DdTitlepage.ts:485</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L478">src/DdTitlepage.ts:478</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="nodeName" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>node<wbr/>Name</span><a href="#nodeName" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">node<wbr/>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -2034,21 +2020,19 @@ potentially inherited values.</p>
 <div class="tsd-signature">organisation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.organisation</span></div>
 <div class="tsd-comment tsd-typography"><p>Name of organisation</p>
 <p><strong>Corresponding attribute:</strong> <code>organisation</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L452">src/DdTitlepage.ts:452</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L448">src/DdTitlepage.ts:448</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="organisationUrl" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>organisation<wbr/>Url</span><a href="#organisationUrl" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">organisation<wbr/>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.organisationUrl</span></div>
 <div class="tsd-comment tsd-typography"><p>Hyperlink to organisation</p>
 <p><strong>Corresponding attribute:</strong> <code>organisation-url</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L463">src/DdTitlepage.ts:463</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L458">src/DdTitlepage.ts:458</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="outerHTML" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>outerHTML</span><a href="#outerHTML" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">outerHTML<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
@@ -2168,13 +2152,12 @@ potentially inherited values.</p>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="subTitle" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sub<wbr/>Title</span><a href="#subTitle" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">sub<wbr/>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.subTitle</span></div>
-<div class="tsd-comment tsd-typography"><p>Ssubtitle</p>
+<div class="tsd-comment tsd-typography"><p>Subtitle</p>
 <p><strong>Corresponding attribute:</strong> <code>sub-title</code></p>
-<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)
-```</p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L429">src/DdTitlepage.ts:429</a></li></ul></aside></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L427">src/DdTitlepage.ts:427</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="tabIndex" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tab<wbr/>Index</span><a href="#tabIndex" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">tab<wbr/>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
@@ -2207,6 +2190,16 @@ potentially inherited values.</p>
 <p>Inherited from LitElement.translate</p>
 <ul>
 <li>Defined in node_modules/typescript/lib/lib.dom.d.ts:6359</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="widthLeft" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>width<wbr/>Left</span><a href="#widthLeft" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">width<wbr/>Left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = DEFAULT_ATTRIBUTES.widthLeft</span></div>
+<div class="tsd-comment tsd-typography"><p>Width of the left column (remember, 3x2 grid). Has priority <em>over</em> the CSS
+variable <code>--dd-titlepage-w-left</code>.</p>
+<p><strong>Corresponding attribute:</strong> <code>width-left</code></p>
+<p><strong>Default value:</strong> <code>&quot;&quot;</code> (empty string)</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L592">src/DdTitlepage.ts:592</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="__litElement_" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>_$lit<wbr/>Element$</span><a href="#__litElement_" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">_$lit<wbr/>Element$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
@@ -2285,7 +2278,7 @@ adjusted).</p>
 <tr>
 <td align="left"><strong><code>--dd-slide-ratio</code></strong></td>
 <td align="left"><code>calc(16/9)</code></td>
-<td align="left">slide ratio</td>
+<td align="left">slide aspect ratio</td>
 </tr>
 <tr>
 <td align="left"><strong><code>--dd-slide-width</code></strong></td>
@@ -2330,7 +2323,7 @@ adjusted).</p>
 <tr>
 <td align="left"><strong><code>--dd-titlepage-w-left</code></strong></td>
 <td align="left"><code>100%</code></td>
-<td align="left">width of the left column (remember, 3x2 grid, by default, left column is full width)</td>
+<td align="left">width of the left column (remember, 3x2 grid, by default, left column is full width). Can also be set <a href="DdTitlepage.html#widthLeft"><code>width-left</code> attribute</a>.</td>
 </tr>
 <tr>
 <td align="left"><strong><code>--dd-titlepage-h-top</code></strong></td>
@@ -2383,7 +2376,7 @@ up until the <code>dd-titlepage</code> component itself).</p>
 </div><aside class="tsd-sources">
 <p>Overrides LitElement.styles</p>
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L178">src/DdTitlepage.ts:178</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L179">src/DdTitlepage.ts:179</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>dev-mode Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="disableWarning" class="tsd-anchor"></a>
@@ -2595,7 +2588,7 @@ before fulfilling this Promise. To do this, first await
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L636">src/DdTitlepage.ts:636</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L630">src/DdTitlepage.ts:630</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="addEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Event<wbr/>Listener</span><a href="#addEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -2901,7 +2894,7 @@ before fulfilling this Promise. To do this, first await
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Overrides LitElement.firstUpdated</p>
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L712">src/DdTitlepage.ts:712</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L706">src/DdTitlepage.ts:706</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="focus" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>focus</span><a href="#focus" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -3220,7 +3213,7 @@ before fulfilling this Promise. To do this, first await
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L680">src/DdTitlepage.ts:680</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L674">src/DdTitlepage.ts:674</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="insertAdjacentElement" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>insert<wbr/>Adjacent<wbr/>Element</span><a href="#insertAdjacentElement" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -3369,7 +3362,7 @@ before fulfilling this Promise. To do this, first await
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L600">src/DdTitlepage.ts:600</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L594">src/DdTitlepage.ts:594</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="matches" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matches</span><a href="#matches" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -3671,7 +3664,7 @@ before fulfilling this Promise. To do this, first await
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TemplateResult</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Overrides LitElement.render</p>
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L753">src/DdTitlepage.ts:753</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L750">src/DdTitlepage.ts:750</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="replaceChild" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>replace<wbr/>Child</span><a href="#replaceChild" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -3935,7 +3928,7 @@ before fulfilling this Promise. To do this, first await
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/d1f3aa3/src/DdTitlepage.ts#L665">src/DdTitlepage.ts:665</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://gitlab.com/digital-dasein/software/html-presentations/dd-titlepage/-/blob/9235759/src/DdTitlepage.ts#L659">src/DdTitlepage.ts:659</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="toggleAttribute" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>toggle<wbr/>Attribute</span><a href="#toggleAttribute" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -4699,6 +4692,7 @@ properties and are used in the rest of the update process.</p>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DdTitlepage.html#textContent" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>text<wbr/>Content</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DdTitlepage.html#title" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>title</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DdTitlepage.html#translate" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>translate</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class"><a href="DdTitlepage.html#widthLeft" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>width<wbr/>Left</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DdTitlepage.html#__litElement_" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_$lit<wbr/>Element$</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DdTitlepage.html#_initializers" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_initializers?</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DdTitlepage.html#disableWarning" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>disable<wbr/>Warning?</a></li>

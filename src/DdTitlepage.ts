@@ -31,6 +31,7 @@ const DEFAULT_ATTRIBUTES = {
   htmlMidRight: '',
   htmlBotLeft: '',
   htmlBotRight: '',
+  widthLeft: '100%',
 };
 
 /*---------------------------------------------------------------------*/
@@ -145,23 +146,23 @@ export class DdTitlepage extends LitElement {
    * |**`--dd-color-prim`**        |`rgba(153, 155, 132, 1)`    | primary `dd-component` color, which propagates into nested `dd-elements`                  |
    * |**`--dd-color-prim-dark`**   |`rgba(65, 90, 72, 1)`       | *dark-theme* primary `dd-component` color, which propagates into nested `dd-elements`     |
    * |**`--dd-color-sec`**         |`rgba(248, 237, 227, 1)`    | secundary `dd-component` color, which propagates into nested `dd-elements`                |
-   * |**`--dd-color-sec-dark`**    |`rgba(238, 254, 216, 1)`    | *dark-theme* secundary `dd-component` color, which propagates into nested `dd-elements` |
+   * |**`--dd-color-sec-dark`**    |`rgba(238, 254, 216, 1)`    | *dark-theme* secundary `dd-component` color, which propagates into nested `dd-elements`   |
    * |**`--dd-color-list-bg`**     |`rgba(248, 237, 227, 0.5)`  | background color for `list`-mode                                                          |
    * |**`--dd-color-text`**        |`rgba(0, 0, 0, 0.9)`        | main text color                                                                           |
    * |**`--dd-color-text-light`**  |`rgba(255, 255, 255, 1)`    | *light* text color                                                                        |
-   * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide aspect ratio |
+   * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide aspect ratio                                                                        |
    * |**`--dd-slide-width`**       |`1024px`                    | slide width (this, together with`--dd-slide-ratio` determines the slide height)           |
-   * |**`--dd-font`**              |`24px/2 'Roboto', sans-serif`| font style |
-   * |**`--dd-titlepage-padding-side`**     |`50px`    | content padding from the side |
-   * |**`--dd-titlepage-padding-top-top`**  |`10px`    | content top-padding for the top row     |
-   * |**`--dd-titlepage-padding-mid-top`**  |`100px`   | content top-padding for the middel row |
-   * |**`--dd-titlepage-padding-bot-top`**  |`10px`    | content top-padding for the bottom row  |
-   * |**`--dd-titlepage-align-lsec`**  |`left`     | align left section of titlepage (options: [left, right, or center]) |
-   * |**`--dd-titlepage-align-rsec`**  |`right`    | align right section of titlepage (options: [left, right, or center]) |
-   * |**`--dd-titlepage-w-left`**      |`100%`    | width of the left column (remember, 3x2 grid, by default, left column is full width) |
-   * |**`--dd-titlepage-h-top`**      |`calc(0.15 * var(--slide-height)`    | height of the top row |
-   * |**`--dd-titlepage-h-middle`**      |`var(--slide-height) - var(--titlepage-h-top) - var(--titlepage-h-bottom)`    | height of the middle row |
-   * |**`--dd-titlepage-h-bottom`**      |`calc(0.2 * var(--slide-height)`    | height of the bottom row |
+   * |**`--dd-font`**              |`24px/2 'Roboto', sans-serif`| font style                                                                               |
+   * |**`--dd-titlepage-padding-side`**     |`50px`    | content padding from the side            |
+   * |**`--dd-titlepage-padding-top-top`**  |`10px`    | content top-padding for the top row      |
+   * |**`--dd-titlepage-padding-mid-top`**  |`100px`   | content top-padding for the middel row   |
+   * |**`--dd-titlepage-padding-bot-top`**  |`10px`    | content top-padding for the bottom row   |
+   * |**`--dd-titlepage-align-lsec`**  |`left`     | align left section of titlepage (options: [left, right, or center])                 |
+   * |**`--dd-titlepage-align-rsec`**  |`right`    | align right section of titlepage (options: [left, right, or center])                |
+   * |**`--dd-titlepage-w-left`**      |`100%`     | width of the left column (remember, 3x2 grid, by default, left column is full width). Can also be set {@link DdTitlepage.widthLeft | `width-left` attribute}. |
+   * |**`--dd-titlepage-h-top`**       |`calc(0.15 * var(--slide-height)`    | height of the top row                                     |
+   * |**`--dd-titlepage-h-middle`**    |`var(--slide-height) - var(--titlepage-h-top) - var(--titlepage-h-bottom)`  | height of the middle row |
+   * |**`--dd-titlepage-h-bottom`**    |`calc(0.2 * var(--slide-height)`    | height of the bottom row |
    * |**`--dd-titlepage-font-size`**         |`24px`                                           | fontsize for default titlepage text |
    * |**`--dd-titlepage-title-font-size`**   |`calc(2.15 * var(--titlepage-font-size))`        | fontsize title |
    * |**`--dd-titlepage-subtitle-font-size`**|`calc(0.6 * var(--titlepage-title-font-size))`   | fontsize subtitle |
@@ -579,6 +580,17 @@ export class DdTitlepage extends LitElement {
   @property({ type: String, attribute: 'html-bot-right' })
   htmlBotRight = DEFAULT_ATTRIBUTES.htmlBotRight;
 
+  /**
+   * Width of the left column (remember, 3x2 grid). Has priority _over_ the CSS
+   * variable `--dd-titlepage-w-left`.
+   *
+   * **Corresponding attribute:** `width-left`
+   *
+   * **Default value:** `""` (empty string)
+   */
+  @property({ type: String, attribute: 'width-left' })
+  widthLeft = DEFAULT_ATTRIBUTES.widthLeft;
+
   makeTitlePage() {
     return `
         <div class='dd-titlepage'>
@@ -703,6 +715,9 @@ export class DdTitlepage extends LitElement {
       this.style.setProperty('--titlepage-padding-right', '0px');
       this.style.setProperty('--titlepage-w-left', '100%');
     }
+
+    if (this.widthLeft !== DEFAULT_ATTRIBUTES.widthLeft)
+      this.style.setProperty('--titlepage-w-left', this.widthLeft);
 
     if (this.centerImg) {
       /*

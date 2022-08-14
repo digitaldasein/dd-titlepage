@@ -109,6 +109,15 @@ describe('DdTitlepage', () => {
     expect(titlepageTitle).to.include('ERROR');
   });
 
+  it('Set width of left column', async () => {
+    const el = await fixture<DdTitlepage>(html`
+      <dd-titlepage width-left="100px"></dd-titlepage>
+    `);
+    await timeout(100);
+    const wLeft = getComputedStyle(el).getPropertyValue('--titlepage-w-left');
+    expect(wLeft).to.equal('100px');
+  });
+
   it('Inject content from selector', async () => {
     await fixture<DdTitlepage>(html`
       <div
