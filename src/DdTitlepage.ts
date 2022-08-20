@@ -245,13 +245,12 @@ export class DdTitlepage extends LitElement {
       );
 
       /* dd color pallette */
-      --titlepage-prim-color: var(--dd-prim-color, rgba(153, 155, 132, 1));
-      --titlepage-prim-color: var(--dd-prim-color, rgba(121, 135, 119, 1));
+      --titlepage-color-prim: var(--dd-color-prim, rgba(153, 155, 132, 1));
       /*
 
       */
-      --titlepage-prim-color-dark: var(
-        --dd-prim-color-dark,
+      --titlepage-color-prim-dark: var(
+        --dd-color-prim-dark,
         rgba(65, 90, 72, 1)
       );
       --titlepage-color-sec: var(--dd-color-sec, rgba(248, 237, 227, 1));
@@ -351,7 +350,7 @@ export class DdTitlepage extends LitElement {
 
     .dd-titlepage-middle {
       max-height: var(--titlepage-h-middle);
-      background-color: var(--titlepage-prim-color);
+      background-color: var(--titlepage-color-prim);
       color: var(--titlepage-color-text-light);
       padding: var(--titlepage-padding-secmid);
     }
