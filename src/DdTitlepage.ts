@@ -143,13 +143,12 @@ export class DdTitlepage extends LitElement {
    *
    * |  <div style="width:200px">CSS variable</div>   | <div style="width:130px">Default</div>   | Description |
    * |:-----------------------------------------------|:-----------------------------------------|:------------|
-   * |**`--dd-color-prim`**        |`rgba(153, 155, 132, 1)`    | primary `dd-component` color, which propagates into nested `dd-elements`                  |
-   * |**`--dd-color-prim-dark`**   |`rgba(65, 90, 72, 1)`       | *dark-theme* primary `dd-component` color, which propagates into nested `dd-elements`     |
-   * |**`--dd-color-sec`**         |`rgba(248, 237, 227, 1)`    | secundary `dd-component` color, which propagates into nested `dd-elements`                |
-   * |**`--dd-color-sec-dark`**    |`rgba(238, 254, 216, 1)`    | *dark-theme* secundary `dd-component` color, which propagates into nested `dd-elements`   |
-   * |**`--dd-color-list-bg`**     |`rgba(248, 237, 227, 0.5)`  | background color for `list`-mode                                                          |
-   * |**`--dd-color-text`**        |`rgba(0, 0, 0, 0.9)`        | main text color                                                                           |
-   * |**`--dd-color-text-light`**  |`rgba(255, 255, 255, 1)`    | *light* text color                                                                        |
+   * |**`--dd-titlepage-color-fg-top | var(--dd-color-text)      | foreground color (text) top segment         |
+   * |**`--dd-titlepage-color-bg-top | var(--dd-color-sec)       | background color  top segment               |
+   * |**`--dd-titlepage-color-fg-mid | var(--dd-color-text-light)| foreground  color (text)  middle segment    |
+   * |**`--dd-titlepage-color-bg-mid | var(--dd-color-prim)      | background color  middle segment            |
+   * |**`--dd-titlepage-color-fg-bot | var(--dd-color-text)      | foreground color (text) bottom segment      |
+   * |**`--dd-titlepage-color-bg-bot | var(--dd-color-sec)       | background color bottom segment             |
    * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide aspect ratio                                                                        |
    * |**`--dd-slide-width`**       |`1024px`                    | slide width (this, together with`--dd-slide-ratio` determines the slide height)           |
    * |**`--dd-font`**              |`24px/2 'Roboto', sans-serif`| font style                                                                               |
@@ -245,23 +244,12 @@ export class DdTitlepage extends LitElement {
       );
 
       /* dd color pallette */
-      --titlepage-color-prim: var(--dd-color-prim, rgba(153, 155, 132, 1));
-      /*
-
-      */
-      --titlepage-color-prim-dark: var(
-        --dd-color-prim-dark,
-        rgba(65, 90, 72, 1)
-      );
-      --titlepage-color-sec: var(--dd-color-sec, rgba(248, 237, 227, 1));
-      --titlepage-color-sec-dark: var(
-        --dd-color-sec-dark,
-        rgba(238, 254, 216, 1)
-      );
-      --titlepage-color-text: var(--dd-color-text, rgba(0, 0, 0, 0.9));
-      --titlepage-color-text-light: var(
-        --dd-color-text-light,
-        rgba(255, 255, 255, 1)
+      --dd-titlepage-color-fg-top: var(--dd-color-text)
+      --dd-titlepage-color-bg-top: var(--dd-color-sec)
+      --dd-titlepage-color-fg-mid: var(--dd-color-text-light)
+      --dd-titlepage-color-bg-mid: var(--dd-color-prim)
+      --dd-titlepage-color-fg-bot: var(--dd-color-text)
+      --dd-titlepage-color-bg-bot: var(--dd-color-sec)
       );
 
       font: var(--titlepage-font);
@@ -343,22 +331,22 @@ export class DdTitlepage extends LitElement {
 
     .dd-titlepage-top {
       top: 0;
-      background-color: var(--titlepage-color-sec);
-      color: var(--titlepage-color-text);
+      background-color: var(--dd-titlepage-color-bg-top);
+      color: var(--dd-titlepage-color-fg-top);
       padding: var(--titlepage-padding-sectop);
     }
 
     .dd-titlepage-middle {
       max-height: var(--titlepage-h-middle);
-      background-color: var(--titlepage-color-prim);
-      color: var(--titlepage-color-text-light);
+      background-color: var(--dd-titlepage-color-bg-mid);
+      color: var(--dd-titlepage-color-fg-mid);
       padding: var(--titlepage-padding-secmid);
     }
 
     .dd-titlepage-bottom {
       padding: var(--titlepage-padding-secbot);
-      background-color: var(--titlepage-color-sec);
-      color: var(--titlepage-color-text);
+      background-color: var(--dd-titlepage-color-bg-bottom);
+      color: var(--dd-titlepage-color-bg-bott);
     }
     .dd-titlepage-bottom .default {
       font-size: calc(0.45 * var(--titlepage-title-font-size));
@@ -378,7 +366,7 @@ export class DdTitlepage extends LitElement {
 
     .dd-titlepage-org-url {
       text-decoration: none;
-      /*color: var(--titlepage-color-text)*/
+      /*color: var(--dd-titlepage-color-text)*/
     }
 
     @media (max-width: 1168px) {
