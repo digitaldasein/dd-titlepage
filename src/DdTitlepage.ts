@@ -23,6 +23,7 @@ const DEFAULT_ATTRIBUTES = {
   fromSelector: 'dd-slide-collection',
   configPath: '',
   noDefaultMap: false,
+  center: false,
   centerText: false,
   centerImg: false,
   htmlTopLeft: '',
@@ -484,6 +485,16 @@ export class DdTitlepage extends LitElement {
   centerImg = DEFAULT_ATTRIBUTES.centerImg;
 
   /**
+   * Boolean for centering all titlepage content
+   *
+   * **Corresponding attribute:** `center`
+   *
+   * **Default value:** `false`
+   */
+  @property({ type: Boolean, attribute: 'center' })
+  center = DEFAULT_ATTRIBUTES.center;
+
+  /**
    * Path to JSON config file (corresponding inline attributes will
    * **overwrite** attributes defined in JSON config
    *
@@ -695,7 +706,7 @@ export class DdTitlepage extends LitElement {
       (logoElem as HTMLElement)!.style.display = 'none';
     }
 
-    if (this.centerText) {
+    if (this.centerText || this.center) {
       this.style.setProperty('--titlepage-align-lsec', 'center');
       this.style.setProperty('--titlepage-padding-left', '0px');
       this.style.setProperty('--titlepage-padding-right', '0px');
@@ -705,7 +716,7 @@ export class DdTitlepage extends LitElement {
     if (this.widthLeft !== DEFAULT_ATTRIBUTES.widthLeft)
       this.style.setProperty('--titlepage-w-left', this.widthLeft);
 
-    if (this.centerImg) {
+    if (this.centerImg || this.center) {
       /*
         const _getWidth:any = async () => {
           await timeout(50);
