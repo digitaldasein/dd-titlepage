@@ -673,29 +673,32 @@ export class DdTitlepage extends LitElement {
 
     // relevant dd-slide-collection attributes
     if (injectFromElem) {
-      if (injectFromElem.getAttribute('main-title'))
+      if (injectFromElem.getAttribute('main-title') && !this.mainTitle)
         this.mainTitle = injectFromElem!.getAttribute('main-title') as string;
 
-      if (injectFromElem.getAttribute('sub-title'))
+      if (injectFromElem.getAttribute('sub-title') && !this.subTitle)
         this.subTitle = injectFromElem!.getAttribute('sub-title') as string;
 
-      if (injectFromElem.getAttribute('author'))
+      if (injectFromElem.getAttribute('author') && !this.author)
         this.author = injectFromElem!.getAttribute('author') as string;
 
-      if (injectFromElem.getAttribute('date'))
+      if (injectFromElem.getAttribute('date') && !this.date)
         this.date = injectFromElem!.getAttribute('date') as string;
 
-      if (injectFromElem.getAttribute('organisation'))
+      if (injectFromElem.getAttribute('organisation') && !this.organisation)
         this.organisation = injectFromElem!.getAttribute(
           'organisation'
         ) as string;
 
-      if (injectFromElem.getAttribute('organisation-url'))
+      if (
+        injectFromElem.getAttribute('organisation-url') &&
+        !this.organisationUrl
+      )
         this.organisationUrl = injectFromElem!.getAttribute(
           'organisation-url'
         ) as string;
 
-      if (injectFromElem.getAttribute('img-src'))
+      if (injectFromElem.getAttribute('img-src') && !this.imgSrc)
         this.imgSrc = injectFromElem!.getAttribute('img-src') as string;
     }
   }
