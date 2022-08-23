@@ -674,32 +674,50 @@ export class DdTitlepage extends LitElement {
 
     // relevant dd-slide-collection attributes
     if (injectFromElem) {
-      if (injectFromElem.getAttribute('main-title') && !this.mainTitle)
+      if (
+        injectFromElem.getAttribute('main-title') &&
+        this.getAttribute('main-title') == null
+      )
         this.mainTitle = injectFromElem!.getAttribute('main-title') as string;
 
-      if (injectFromElem.getAttribute('sub-title') && !this.subTitle)
+      if (
+        injectFromElem.getAttribute('sub-title') &&
+        this.getAttribute('sub-title') == null
+      )
         this.subTitle = injectFromElem!.getAttribute('sub-title') as string;
 
-      if (injectFromElem.getAttribute('author') && !this.author)
+      if (
+        injectFromElem.getAttribute('author') &&
+        this.getAttribute('author') == null
+      )
         this.author = injectFromElem!.getAttribute('author') as string;
 
-      if (injectFromElem.getAttribute('date') && !this.date)
+      if (
+        injectFromElem.getAttribute('date') &&
+        this.getAttribute('date') == null
+      )
         this.date = injectFromElem!.getAttribute('date') as string;
 
-      if (injectFromElem.getAttribute('organisation') && !this.organisation)
+      if (
+        injectFromElem.getAttribute('organisation') &&
+        this.getAttribute('organisation') == null
+      )
         this.organisation = injectFromElem!.getAttribute(
           'organisation'
         ) as string;
 
       if (
         injectFromElem.getAttribute('organisation-url') &&
-        !this.organisationUrl
+        this.getAttribute('organisation-url') == null
       )
         this.organisationUrl = injectFromElem!.getAttribute(
           'organisation-url'
         ) as string;
 
-      if (injectFromElem.getAttribute('img-src') && !this.imgSrc)
+      if (
+        injectFromElem.getAttribute('img-src') &&
+        this.getAttribute('img-src') == null
+      )
         this.imgSrc = injectFromElem!.getAttribute('img-src') as string;
     }
   }
