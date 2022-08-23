@@ -477,7 +477,7 @@ export class DdTitlepage extends LitElement {
   /**
    * Boolean for centering the image/logo
    *
-   * **Corresponding attribute:** `center-text`
+   * **Corresponding attribute:** `center-img`
    *
    * **Default value:** `false`
    */
@@ -485,7 +485,8 @@ export class DdTitlepage extends LitElement {
   centerImg = DEFAULT_ATTRIBUTES.centerImg;
 
   /**
-   * Boolean for centering all titlepage content
+   * Boolean for centering all titlepage contents (combination of `center-text`
+   * and `center-img`)
    *
    * **Corresponding attribute:** `center`
    *
