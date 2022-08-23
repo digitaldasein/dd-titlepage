@@ -143,12 +143,12 @@ export class DdTitlepage extends LitElement {
    *
    * |  <div style="width:200px">CSS variable</div>   | <div style="width:130px">Default</div>   | Description |
    * |:-----------------------------------------------|:-----------------------------------------|:------------|
-   * |**`--dd-titlepage-color-fg-top | var(--dd-color-text)      | foreground color (text) top segment         |
-   * |**`--dd-titlepage-color-bg-top | var(--dd-color-sec)       | background color  top segment               |
-   * |**`--dd-titlepage-color-fg-mid | var(--dd-color-text-light)| foreground  color (text)  middle segment    |
-   * |**`--dd-titlepage-color-bg-mid | var(--dd-color-prim)      | background color  middle segment            |
-   * |**`--dd-titlepage-color-fg-bot | var(--dd-color-text)      | foreground color (text) bottom segment      |
-   * |**`--dd-titlepage-color-bg-bot | var(--dd-color-sec)       | background color bottom segment             |
+   * |**`--dd-titlepage-color-fg-top`** | var(--dd-color-text)      | foreground color (text) top segment         |
+   * |**`--dd-titlepage-color-bg-top`** | var(--dd-color-sec)       | background color  top segment               |
+   * |**`--dd-titlepage-color-fg-mid`** | var(--dd-color-text-light)| foreground  color (text)  middle segment    |
+   * |**`--dd-titlepage-color-bg-mid`** | var(--dd-color-prim)      | background color  middle segment            |
+   * |**`--dd-titlepage-color-fg-bot`** | var(--dd-color-text)      | foreground color (text) bottom segment      |
+   * |**`--dd-titlepage-color-bg-bot`** | var(--dd-color-sec)       | background color bottom segment             |
    * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide aspect ratio                                                                        |
    * |**`--dd-slide-width`**       |`1024px`                    | slide width (this, together with`--dd-slide-ratio` determines the slide height)           |
    * |**`--dd-font`**              |`24px/2 'Roboto', sans-serif`| font style                                                                               |
