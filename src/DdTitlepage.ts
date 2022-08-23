@@ -26,13 +26,13 @@ const DEFAULT_ATTRIBUTES = {
   center: false,
   centerText: false,
   centerImg: false,
+  widthLeft: '100%',
   htmlTopLeft: '',
   htmlTopRight: '',
   htmlMidLeft: '',
   htmlMidRight: '',
   htmlBotLeft: '',
   htmlBotRight: '',
-  widthLeft: '100%',
 };
 
 /*---------------------------------------------------------------------*/
@@ -635,7 +635,7 @@ export class DdTitlepage extends LitElement {
         </div>`;
     }
 
-    if (this.author || this.organisation || this.date) {
+    if (this.author || this.organisation || (this.date && !this.htmlBotLeft)) {
       if (this.organisationUrl)
         this.htmlBotLeft = `
           <div class="dd-titlepage-bot-l default">
