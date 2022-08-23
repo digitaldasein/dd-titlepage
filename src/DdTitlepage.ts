@@ -345,7 +345,7 @@ export class DdTitlepage extends LitElement {
     .dd-titlepage-bottom {
       padding: var(--titlepage-padding-secbot);
       background-color: var(--dd-titlepage-color-bg-bot);
-      color: var(--dd-titlepage-color-bg-bot);
+      color: var(--dd-titlepage-color-fg-bot);
     }
     .dd-titlepage-bottom .default {
       font-size: calc(0.45 * var(--titlepage-title-font-size));
