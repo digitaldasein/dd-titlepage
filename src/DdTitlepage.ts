@@ -205,7 +205,7 @@ export class DdTitlepage extends LitElement {
       /* dd color pallette */
       --dd-titlepage-color-fg-top: var(--dd-color-text);
       --dd-titlepage-color-bg-top: var(--dd-color-sec);
-      --dd-titlepage-color-fg-mid: var(--dd-color-text);
+      --dd-titlepage-color-fg-mid: var(--dd-color-text-light);
       --dd-titlepage-color-bg-mid: var(--dd-color-prim);
       --dd-titlepage-color-fg-bot: var(--dd-color-text);
       --dd-titlepage-color-bg-bot: var(--dd-color-sec);
