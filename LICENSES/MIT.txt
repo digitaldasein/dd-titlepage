@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 Digital Dasein <https://digital-dasein.gitlab.io>
+Copyright (c) 2022 Digital Dasein <https://digitaldasein.org>
               2022 Gerben Peeters <gerben@digitaldasein.org>
               2022 Senne Van Baelen <senne@digitaldasein.org>
 
