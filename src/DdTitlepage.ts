@@ -173,7 +173,6 @@ export class DdTitlepage extends LitElement {
    * The variables can be set anywhere in your HTML context (e.g. in `:root`,
    * up until the `dd-titlepage` component itself).
    *
-   *
    */
 
   static styles = css`
@@ -768,8 +767,6 @@ export class DdTitlepage extends LitElement {
 
   render() {
     let htmlContent = '';
-
-    this.title = 'Titlepage';
 
     if (this.configPath) this.setPropsFromJson();
 
