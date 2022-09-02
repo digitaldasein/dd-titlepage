@@ -150,6 +150,7 @@ export class DdTitlepage extends LitElement {
    * |**`--dd-titlepage-color-bg-mid`** | `var(--dd-color-prim)`      | background color  middle segment            |
    * |**`--dd-titlepage-color-fg-bot`** | `var(--dd-color-text)`      | foreground color (text) bottom segment      |
    * |**`--dd-titlepage-color-bg-bot`** | `var(--dd-color-sec)`       | background color bottom segment             |
+   * |**`--dd-titlepage-color-link`**   | `inherit`                   | link color in titlepage             |
    * |**`--dd-slide-ratio`**       |`calc(16/9)`                | slide aspect ratio                                                                        |
    * |**`--dd-slide-width`**       |`1024px`                    | slide width (this, together with`--dd-slide-ratio` determines the slide height)           |
    * |**`--dd-font`**              |`24px/2 'Roboto', sans-serif`| font style                                                                               |
@@ -208,6 +209,8 @@ export class DdTitlepage extends LitElement {
       --dd-titlepage-color-bg-mid: var(--dd-color-prim);
       --dd-titlepage-color-fg-bot: var(--dd-color-text);
       --dd-titlepage-color-bg-bot: var(--dd-color-sec);
+
+      --dd-titlepage-color-link: inherit;
 
       --titlepage-align-lsec: var(--dd-titlepage-align-lsec, left);
       --titlepage-align-rsec: var(--dd-titlepage-align-rsec, right);
@@ -366,6 +369,10 @@ export class DdTitlepage extends LitElement {
     .dd-titlepage-org-url {
       text-decoration: none;
       /*color: var(--dd-titlepage-color-text)*/
+    }
+
+    a {
+      color: var(--dd-titlepage-color-link);
     }
 
     @media (max-width: 1168px) {
