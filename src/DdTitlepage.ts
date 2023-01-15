@@ -275,7 +275,7 @@ export class DdTitlepage extends LitElement {
       min-height: 100%;
       height: 100%;
       width: 100%;
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       right: 0;
